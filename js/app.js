@@ -6,4 +6,5 @@ App.ApplicationStore = DS.Store.extend({
 
 App.Router.map(function() {
   this.route('about');
+  this.resource('question', { path: '/:question_id' });
 });
