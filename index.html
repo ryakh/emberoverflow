@@ -227,7 +227,9 @@
       {{question.title}}
     {{/link-to}}
 
+    {{#if hasAnswers}}
     <span class="label label-default">{{answersCount}} {{pluralForm}}</span>
+    {{/if}}
 
     (asked by {{question.author.fullname}})
   </script>
