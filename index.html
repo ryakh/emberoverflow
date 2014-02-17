@@ -96,7 +96,7 @@
   <script type="text/x-handlebars" id="sign-in">
     <div class="row">
       <div class="col-md-8">
-      {{#if userSignedIn}}
+      {{#if controllers.application.userSignedIn}}
         <p>You are already signed-in!</p>
       {{else}}
         <form {{action "signIn" on="submit"}}>
