@@ -81,6 +81,9 @@ test("signed-in user can ask new question", function() {
   fillIn("#question", "Question");
   click("button");
 
+  fillIn("#answer", "Answer");
+  click("button");
+
   andThen(function(){
     equal(
       find("h2").text(),
@@ -92,6 +95,18 @@ test("signed-in user can ask new question", function() {
       find("p:first").text().replace(/\s+/g, ''),
       "Question",
       "Question is rendered"
+    );
+
+    notEqual(
+      find(".panel").length,
+      0,
+      "New answer was added"
+    );
+
+    equal(
+      find(".panel-body").text().replace(/\s+/g, ''),
+      "Answer",
+      "Question was answered"
     );
   });
 });
