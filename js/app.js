@@ -8,7 +8,11 @@ App.ApplicationStore = DS.Store.extend({
 
 App.Router.map(function() {
   this.route('about');
-  this.resource('question', { path: '/:question_id' });
-  this.route('ask-question');
   this.route('sign-in');
+
+  this.route('ask-question');
+
+  this.resource('questions', function() {
+    this.resource('question', { path: '/:question_id' });
+  });
 });
