@@ -13,5 +13,11 @@ App.ApplicationController = Ember.Controller.extend({
 
   userSignedIn: function() {
     return localStorage['currentUser'] != null;
-  }.property()
+  }.property(),
+
+  actions: {
+    signOut: function() {
+      delete localStorage['currentUser'];
+    }
+  }
 });
