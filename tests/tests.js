@@ -35,3 +35,22 @@ test("index page has a title and a list of questions", function() {
     );
   });
 });
+
+test("quesion links on index page lead to questions", function() {
+  visit("/");
+  click("ul:not(.nav) > li > a:first");
+
+  andThen(function() {
+    equal(
+      find("h2").length,
+      1,
+      "Question header is rendered"
+    );
+
+    equal(
+      find("p").length,
+      2,
+      "Question and author are rendered"
+    );
+  });
+});
