@@ -9,7 +9,21 @@
 </head>
 <body>
   <script type="text/x-handlebars">
-    <h2>Welcome to Ember.js</h2>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        {{#link-to "index" classNames="navbar-brand"}}
+          Emberoverflow
+        {{/link-to}}
+      </div>
+
+      <ul class="nav navbar-nav">
+        <li>
+          {{#link-to "about"}}
+            About site
+          {{/link-to}}
+        </li>
+      </ul>
+    </nav>
 
     {{outlet}}
   </script>
