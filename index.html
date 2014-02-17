@@ -36,7 +36,9 @@
 
         <ul>
         {{#each item in model}}
-          <li>{{item}}</li>
+          <li>
+            {{item.title}} — asked by {{item.author}}
+          </li>
         {{/each}}
         </ul>
       </div>
