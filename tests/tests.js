@@ -18,13 +18,13 @@ module("Integration tests", {
   }
 });
 
-test("/", function() {
+test("index page has a title and a list of questions", function() {
   visit("/");
 
   andThen(function() {
     equal(
       find("h2").text(),
-      "Welcome to Ember.js",
+      "Welcome to Emberoverflow",
       "Application header is rendered"
     );
 
