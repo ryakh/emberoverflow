@@ -1,4 +1,6 @@
-App = Ember.Application.create();
+App = Ember.Application.create({
+  currentUser: localStorage['currentUser']
+});
 
 App.ApplicationStore = DS.Store.extend({
   adapter: DS.FixtureAdapter
