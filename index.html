@@ -29,11 +29,31 @@
   </script>
 
   <script type="text/x-handlebars" id="index">
-    <ul>
-    {{#each item in model}}
-      <li>{{item}}</li>
-    {{/each}}
-    </ul>
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Welcome to Emberoverflow</h2>
+
+        <ul>
+        {{#each item in model}}
+          <li>{{item}}</li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" id="about">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>About Emberoverflow</h2>
+
+        <p>
+          Emberoverflow is a question and answer site for programmers and
+          hamsters. We are a little bit different because we are written in
+          Ember.js
+        </p>
+      </div>
+    </div>
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>
