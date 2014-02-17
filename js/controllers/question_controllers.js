@@ -12,6 +12,15 @@ App.AskQuestionController = Ember.ArrayController.extend({
       this.get('controllers.application.signedInUser').then(function(user) {
         question.set('author', user);
       });
+
+      var controller = this;
+
+      question.save().then(function(question) {
+        controller.setProperties({
+          title: '',
+          question: ''
+        });
+      });
     }
   }
 });
