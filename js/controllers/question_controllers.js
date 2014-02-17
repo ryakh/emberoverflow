@@ -48,7 +48,7 @@ App.QuestionController = Ember.ObjectController.extend(
 
   canEditQuestion: function() {
     return this.get('author.id') == App.currentUser
-  }.property(),
+  }.property('model'),
 
   actions: {
     toggleEditQuestion: function() {
