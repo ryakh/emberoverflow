@@ -85,23 +85,7 @@
 
     <hr>
 
-    <div class="row">
-      <div class="col-md-8">
-        {{#each answers}}
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              {{author.fullname}} on {{date}}
-            </div>
-
-            <div class="panel-body">
-              {{answer}}
-            </div>
-          </div>
-        {{else}}
-          <h4>Sorry, there are no answer to this question</h4>
-        {{/each}}
-      </div>
-    </div>
+    {{partial "answers"}}
 
     <hr>
 
