@@ -17,6 +17,14 @@
       </div>
 
       <ul class="nav navbar-nav">
+        {{#if userSignedIn}}
+          <li>
+            {{#link-to "ask-question"}}
+              Ask Question
+            {{/link-to}}
+          </li>
+        {{/if}}
+
         <li>
           {{#link-to "about"}}
             About site
