@@ -164,6 +164,26 @@
           </button>
         </form>
       </div>
+
+      <div class="col-md-4">
+        <h2>
+          Maybe this will help
+        </h2>
+
+        {{#each latestQuestions}}
+        <div class="panel panel-default">
+          <div class="panel-body">
+            {{#link-to "question" this}}
+              {{title}}
+            {{/link-to}}
+
+            {{question}}
+            <br>
+            — {{author.fullname}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
     </div>
   </script>
 
