@@ -86,13 +86,13 @@ test("signed-in user can ask new question", function() {
 
   andThen(function(){
     equal(
-      find("h2").text(),
+      find("h2:last").text(),
       "Question title",
       "Question title is rendered"
     );
 
     equal(
-      find("p:first").text().replace(/\s+/g, ''),
+      find("p#question").text().replace(/\s+/g, ''),
       "Question",
       "Question is rendered"
     );
