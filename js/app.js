@@ -6,7 +6,19 @@ App.Router.map(function() {
 
 App.IndexRoute = Ember.Route.extend({
   model: function() {
-    return ['red', 'yellow', 'blue'];
+    var questions = [
+      {
+        title:  'How do I feed hamsters?',
+        author: 'Tom Dale'
+      },
+
+      {
+        title:  'Are humans insane?',
+        author: 'Tomster the Hamster'
+      }
+    ];
+
+    return questions;
   }
 });
 
