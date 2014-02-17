@@ -45,14 +45,14 @@ test("quesion links on index page lead to questions", function() {
   andThen(function() {
     equal(
       find("h2").length,
-      1,
-      "Question header is rendered"
+      2,
+      "Question header and application headers are rendered"
     );
 
     equal(
       find("p").length,
-      2,
-      "Question and author are rendered"
+      3,
+      "Question, author and edit link are rendered"
     );
   });
 });
