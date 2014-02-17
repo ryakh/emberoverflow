@@ -79,6 +79,27 @@
     </div>
   </script>
 
+  <script type="text/x-handlebars" id="sign-in">
+    <div class="row">
+      <div class="col-md-8">
+        <form {{action "signIn" on="submit"}}>
+          <div class="form-group">
+            <label for="email">Email address</label>
+
+            {{input id="email"
+              value=email
+              classNames="form-control"
+              placeholder="Enter your email address"}}
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Sign in
+          </button>
+        </form>
+      </div>
+    </div>
+  </script>
+
   <script src="js/libs/jquery-1.10.2.js"></script>
   <script src="js/libs/handlebars-1.1.2.js"></script>
   <script src="js/libs/ember-1.7.0.js"></script>
