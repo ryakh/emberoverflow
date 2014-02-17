@@ -22,7 +22,7 @@ App.IndexRoute = Ember.Route.extend({
   }
 });
 
-App.IndexController = Ember.Controller.extend({
+App.IndexController = Ember.ArrayController.extend({
   siteTitle: 'Welcome to Emberoverflow',
 
   currentTime: function() {
