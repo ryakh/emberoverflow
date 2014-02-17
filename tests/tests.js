@@ -71,3 +71,27 @@ test("user will be able to log in", function() {
     );
   });
 });
+
+test("signed-in user can ask new question", function() {
+  localStorage['currentUser'] = 201;
+  App.set('currentUser', 201);
+
+  visit("/ask-question");
+  fillIn("#title", "Question title");
+  fillIn("#question", "Question");
+  click("button");
+
+  andThen(function(){
+    equal(
+      find("h2").text(),
+      "Question title",
+      "Question title is rendered"
+    );
+
+    equal(
+      find("p:first").text().replace(/\s+/g, ''),
+      "Question",
+      "Question is rendered"
+    );
+  });
+});
