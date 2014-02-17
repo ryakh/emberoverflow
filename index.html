@@ -52,7 +52,7 @@
 
   <script type="text/x-handlebars" id="questions">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-6">
         <h2>{{siteTitle}}</h2>
 
         <p>It is {{currentTime}}</p>
@@ -64,6 +64,10 @@
             {{question-preview question=this}}
           {{/each}}
         </ul>
+      </div>
+
+      <div class="col-md-6">
+        {{outlet}}
       </div>
     </div>
   </script>
