@@ -225,6 +225,14 @@
     </div>
   </script>
 
+  <script type="text/x-handlebars" id="components/question-preview">
+    {{#link-to "question" this}}
+      {{title}}
+    {{/link-to}}
+
+    (asked by {{author.fullname}})
+  </script>
+
   <script src="js/libs/jquery-1.10.2.js"></script>
   <script src="js/libs/handlebars-1.1.2.js"></script>
   <script src="js/libs/ember-1.7.0.js"></script>
