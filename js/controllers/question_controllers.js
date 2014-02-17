@@ -26,6 +26,8 @@ App.AskQuestionController = Ember.ArrayController.extend({
           title: '',
           question: ''
         });
+
+        controller.transitionToRoute('question', question);
       });
     }
   }
