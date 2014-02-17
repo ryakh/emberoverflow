@@ -29,9 +29,9 @@ test("index page has a title and a list of questions", function() {
     );
 
     equal(
-      find("li").length,
-      3,
-      "There are three items in the list"
+      find("ul:not(.nav) > li").length,
+      2,
+      "There are two questions in the list"
     );
   });
 });
