@@ -6,8 +6,11 @@ App.AskQuestionController = Ember.ArrayController.extend({
       var question = this.store.createRecord('question', {
         title: this.get('title'),
         question: this.get('question'),
-        author: this.get('controllers.application.signedInUser'),
         date: new Date()
+      });
+
+      this.get('controllers.application.signedInUser').then(function(user) {
+        question.set('author', user);
       });
     }
   }
