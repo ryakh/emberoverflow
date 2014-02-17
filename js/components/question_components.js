@@ -1,5 +1,3 @@
 App.QuestionPreviewComponent = Ember.Component.extend({
-  answersCount: function() {
-    return this.get('question.answers.length');
-  }.property('question.answers.length')
+  answersCount: Ember.computed.alias('question.answers.length')
 });
