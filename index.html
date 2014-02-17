@@ -240,6 +240,24 @@
     </div>
   </script>
 
+  <script type="text/x-handlebars" id="answer_form">
+    <div class="row">
+      <div class="col-md-8">
+        <h4>Submit your answer:</h4>
+
+        <form {{action "answerQuestion" on="submit"}}>
+          <div class="form-group">
+            {{textarea id="answer" value=answer classNames="form-control"}}
+          </div>
+
+          <button class="btn btn-primary" type="submit">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </script>
+
   <script src="js/libs/jquery-1.10.2.js"></script>
   <script src="js/libs/handlebars-1.1.2.js"></script>
   <script src="js/libs/ember-1.7.0.js"></script>
