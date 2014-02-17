@@ -37,7 +37,11 @@
         <ul>
         {{#each}}
           <li>
-            {{title}} — asked by {{author}}
+            {{#link-to "question" this}}
+              {{title}}
+            {{/link-to}}
+
+            (asked by {{author}})
           </li>
         {{/each}}
         </ul>
