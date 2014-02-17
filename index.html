@@ -152,6 +152,13 @@
               placeholder="Describe your problem in as much detail as possible"}}
           </div>
 
+          {{#if question}}
+            <div class="form-group">
+              <p>Question preview:</p>
+              <p>{{question}}</p>
+            </div>
+          {{/if}}
+
           <button class="btn btn-primary" type="submit">
             Ask Question!
           </button>
