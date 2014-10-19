@@ -15,5 +15,5 @@ App.IndexController = Ember.Controller.extend({
 
   currentTime: function() {
     return(new Date());
-  }
+  }.property()
 });
