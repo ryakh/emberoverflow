@@ -25,9 +25,17 @@
       </ul>
 
       <ul class="nav navbar-nav">
-        <li>
-          {{#link-to "sign-in"}}Sign in{{/link-to}}
-        </li>
+        {{#if userSignedIn}}
+          <li>
+            <a href="#" {{action "signOut"}}>
+              Welcome, {{signedInUser.fullname}} — Sign out
+            </a>
+          </li>
+        {{else}}
+          <li>
+            {{#link-to "sign-in"}}Sign in{{/link-to}}
+          </li>
+        {{/if}}
       </ul>
     </nav>
 
