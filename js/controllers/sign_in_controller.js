@@ -12,6 +12,8 @@ App.SignInController = Ember.Controller.extend({
       } else {
         localStorage['currentUser'] = userToLogin.id;
       }
+
+      App.set('currentUser', userToLogin.id);
     }
   }
 });
