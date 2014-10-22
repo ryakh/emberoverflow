@@ -223,11 +223,11 @@
   </script>
 
   <script type="text/x-handlebars" id="components/question-preview">
-    {{#link-to "question" this}}
-      {{title}}
+    {{#link-to 'question' question}}
+      {{question.title}}
     {{/link-to}}
 
-    (asked by {{author.fullname}})
+    (asked by {{question.author.fullname}})
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>
