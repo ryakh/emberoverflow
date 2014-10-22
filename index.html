@@ -89,23 +89,7 @@
 
     <hr>
 
-    {{#view App.AnswerFormView}}
-    <div class="row">
-      <div class="col-md-8">
-        <h4>Submit your answer:</h4>
-
-        <form {{action "answerQuestion" on="submit"}}>
-          <div class="form-group">
-            {{textarea id="answer" value=answer classNames="form-control"}}
-          </div>
-
-          <button class="btn btn-primary" type="submit">
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
-    {{/view}}
+    {{view App.AnswerFormView}}
   </script>
 
   <script type="text/x-handlebars" id="about">
